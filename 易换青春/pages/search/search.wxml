@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="search-input">
+    <input placeholder="输入关键词" value="{{keyword}}" bindinput="inputKeyword" />
+    <button bindtap="doSearch">搜索</button>
+  </view>
+  <block wx:for="{{goodsList}}" wx:key="id">
+    <view class="goods-item" bindtap="goDetail" data-id="{{item.id}}">
+      <image src="{{item.pic}}" class="goods-img" />
+      <view class="info">
+        <text>{{item.name}}</text>
+        <text>¥{{item.price}}</text>
+      </view>
+    </view>
+  </block>
+</view>

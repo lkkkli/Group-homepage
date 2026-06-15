@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="title">用户登录</view>
+  <view class="form-box">
+    <input class="input" placeholder="请输入账号" value="{{username}}" bindinput="inputUsername" />
+    <input class="input" placeholder="请输入密码" password value="{{password}}" bindinput="inputPassword" />
+    <button class="login-btn" bindtap="doLogin">登录</button>
+    <view class="reg-tip" bindtap="goRegister">没有账号？去注册</view>
+  </view>
+</view>

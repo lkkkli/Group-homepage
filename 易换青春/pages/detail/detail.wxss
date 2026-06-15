@@ -1,0 +1,27 @@
+.detail-img {
+  width: 100%;
+  height: 400rpx;
+  border-radius: 12rpx;
+}
+.info-box {
+  background: #fff;
+  padding: 30rpx;
+  margin-top: 20rpx;
+  border-radius: 12rpx;
+}
+.name {
+  font-size: 36rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 20rpx;
+}
+.price {
+  color: #ff7c4c;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.cate, .desc, .wechat {
+  display: block;
+  margin-top: 15rpx;
+  color: #666;
+}

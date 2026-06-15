@@ -1,0 +1,40 @@
+<view class="container">
+  <!-- 搜索栏 -->
+  <view class="search-box">
+    <input class="search-input" placeholder="搜索商品..." value="{{keyword}}" bindinput="inputSearch" />
+    <button class="search-btn" bindtap="doSearch">搜索</button>
+  </view>
+
+  <!-- 分类栏（两排四列+可点击+带图标） -->
+  <view class="cate-container">
+    <view class="cate-item" 
+          wx:for="{{cateList}}" 
+          wx:key="name" 
+          bindtap="selectCate" 
+          data-cate="{{item.name}}">
+      <view class="cate-icon-wrap">
+        <text class="cate-icon">{{item.icon}}</text>
+      </view>
+      <text class="cate-name">{{item.name}}</text>
+    </view>
+  </view>
+
+  <!-- 热度推荐 -->
+  <view class="recommend-title">热度推荐</view>
+  <view class="goods-grid">
+    <view class="goods-card" 
+          wx:for="{{goodsList}}" 
+          wx:key="id" 
+          bindtap="goDetail" 
+          data-id="{{item.id}}">
+
+      <!-- 🔥 修复1：pic → image（后端返回字段） -->
+      <image class="goods-img" src="{{item.image}}" mode="aspectFill" />
+
+      <!-- 🔥 修复2：加上商品标题（后端建议必须加） -->
+      <view class="goods-name">{{item.title}}</view>
+
+      <view class="price-tag">¥{{item.price}}</view>
+    </view>
+  </view>
+</view>

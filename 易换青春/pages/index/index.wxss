@@ -1,0 +1,104 @@
+page {
+  background-color: #f5f5f5;
+}
+.container {
+  padding: 20rpx;
+}
+
+/* 搜索栏 */
+.search-box {
+  display: flex;
+  background: #fff;
+  border-radius: 50rpx;
+  padding: 10rpx 20rpx;
+  margin-bottom: 30rpx;
+}
+.search-input {
+  flex: 1;
+  font-size: 28rpx;
+}
+.search-btn {
+  background-color: #ff7a45;
+  color: #fff;
+  border-radius: 50rpx;
+  font-size: 26rpx;
+  padding: 10rpx 20rpx;
+  border: none;
+}
+
+/* 分类栏：核心样式 */
+.cate-container {
+  display: flex;
+  flex-wrap: wrap; /* 强制换行，保证4个一行 */
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx 10rpx;
+  margin-bottom: 30rpx;
+}
+.cate-item {
+  width: 25%; /* 4个平分一行 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.cate-icon-wrap {
+  width: 70rpx;
+  height: 70rpx;
+  background: #fff0eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10rpx;
+}
+.cate-icon {
+  font-size: 32rpx; /* emoji大小 */
+}
+.cate-name {
+  font-size: 24rpx;
+  color: #333;
+}
+
+/* 热度推荐 */
+.recommend-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.goods-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* 下面是只改 goods-card 相关 */
+.goods-card {
+  width: 48%;
+  background: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  /* 去掉原来的 position:relative，改用正常流布局 */
+}
+.goods-img {
+  width: 100%;
+  height: 280rpx;
+  display: block;
+}
+/* 商品标题样式 */
+.goods-name {
+  font-size: 26rpx;
+  color: #333;
+  padding: 10rpx 15rpx;
+  /* 单行省略，避免撑开 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* 价格：不再绝对定位，跟标题正常流排列 */
+.price-tag {
+  color: #ff5722;
+  font-size: 28rpx;
+  font-weight: bold;
+  padding: 0 15rpx 15rpx;
+}

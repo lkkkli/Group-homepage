@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="user-info">
+    <text class="username">{{userInfo.username}}</text>
+  </view>
+  <view class="menu-list">
+    <view class="menu-item" bindtap="goMyGoods">我的发布</view>
+    <view class="menu-item" bindtap="logout">退出登录</view>
+  </view>
+</view>

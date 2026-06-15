@@ -1,0 +1,10 @@
+<view class="container">
+  <image src="{{detail.pic}}" class="detail-img" mode="aspectFill" />
+  <view class="info-box">
+    <text class="name">{{detail.name}}</text>
+    <text class="price">¥{{detail.price}}</text>
+    <text class="cate">分类：{{detail.category}}</text>
+    <text class="desc">描述：{{detail.desc}}</text>
+    <text class="wechat">联系微信：{{detail.wechat}}</text>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<view class="container">
+  <!-- 上传图片区域 -->
+  <view class="img-wrap">
+    <image src="{{pic}}" wx:if="{{pic}}" class="img-preview" />
+    <view class="img-add" wx:else bindtap="choosePic">+ 上传图片</view>
+  </view>
+
+  <!-- 表单 -->
+  <view class="form-wrap">
+    <view class="form-item">
+      <text>商品名称</text>
+      <input placeholder="请输入商品名称" value="{{name}}" bindinput="onName" />
+    </view>
+    <view class="form-item">
+      <text>分类</text>
+      <picker mode="selector" range="{{cateList}}" value="{{cateIndex}}" bindchange="onCateChange">
+        <text>{{category || '请选择分类'}}</text>
+      </picker>
+    </view>
+    <view class="form-item">
+      <text>价格</text>
+      <input type="digit" placeholder="请输入价格" value="{{price}}" bindinput="onPrice" />
+    </view>
+    <view class="form-item textarea-item">
+      <text>描述</text>
+      <textarea placeholder="请输入商品描述" value="{{desc}}" bindinput="onDesc"></textarea>
+    </view>
+    <!-- 新增联系方式 -->
+    <view class="form-item">
+      <text>联系方式</text>
+      <input placeholder="微信/QQ" value="{{contact}}" bindinput="onContact" />
+    </view>
+  </view>
+
+  <button class="btn ai-btn" bindtap="aiRecognize">AI识别填充</button>
+  <button class="btn submit-btn" bindtap="submit">提交发布</button>
+</view>

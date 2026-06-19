@@ -1,0 +1,19 @@
+.user-info {
+  background: #fff;
+  padding: 40rpx;
+  text-align: center;
+  border-radius: 12rpx;
+  margin-bottom: 20rpx;
+}
+.username {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.menu-list {
+  background: #fff;
+  border-radius: 12rpx;
+}
+.menu-item {
+  padding: 30rpx;
+  border-bottom: 1rpx solid #eee;
+}

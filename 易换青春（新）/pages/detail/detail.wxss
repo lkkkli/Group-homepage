@@ -1,0 +1,26 @@
+.detail-img {
+  width: 100%;
+  /* 不要写固定height，让图片自适应高度 */
+}
+.info-box {
+  padding: 30rpx;
+}
+.name {
+  font-size: 36rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10rpx;
+}
+.price {
+  font-size: 40rpx;
+  color: #ff4400;
+  display: block;
+  margin: 15rpx 0;
+}
+.cate, .desc, .wechat {
+  font-size: 28rpx;
+  color: #333;
+  display: block;
+  margin-top: 12rpx;
+  line-height: 1.6;
+}

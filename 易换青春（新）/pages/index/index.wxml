@@ -1,0 +1,44 @@
+<view class="container">
+  <!-- 搜索栏 -->
+  <view class="search-box">
+    <input class="search-input" placeholder="搜索商品..." value="{{keyword}}" bindinput="inputSearch" />
+    <button class="search-btn" bindtap="doSearch">搜索</button>
+  </view>
+
+  <!-- 分类栏（两排四列+可点击+带图标） -->
+  <view class="cate-container">
+    <view class="cate-item" 
+          wx:for="{{cateList}}" 
+          wx:key="name" 
+          bindtap="selectCate" 
+          data-cate="{{item.name}}">
+      <view class="cate-icon-wrap">
+        <text class="cate-icon">{{item.icon}}</text>
+      </view>
+      <text class="cate-name">{{item.name}}</text>
+    </view>
+  </view>
+
+  <!-- 热度推荐 -->
+  <view class="recommend-title">热度推荐</view>
+  <view class="goods-grid">
+    <view class="goods-card" 
+          wx:for="{{goodsList}}" 
+          wx:key="id" 
+          bindtap="goDetail" 
+          data-id="{{item.id}}">
+
+      <!-- 兼容两套图片字段：分类用pic，全部商品用image -->
+      <image wx:if="{{item.pic || item.image}}" class="goods-img" src="{{item.pic || item.image}}" mode="aspectFill" />
+      <!-- 兼容标题：分类title / 全部商品name -->
+      <view class="goods-name">{{item.title || item.name}}</view>
+      <!-- 兼容价格：分类price / 全部商品goods_price -->
+      <view class="price-tag">¥{{item.price || item.goods_price}}</view>
+    </view>
+  </view>
+
+  <!-- 无商品空状态 -->
+  <view wx:if="{{goodsList.length === 0}}" class="empty-wrap">
+    <text class="empty-text">暂无匹配商品</text>
+  </view>
+</view>

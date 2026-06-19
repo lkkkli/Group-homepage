@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="img-wrap">
+    <image src="{{detail.pic}}" class="detail-img" mode="aspectFit" />
+  </view>
+  <view class="info-box">
+    <text class="name">{{detail.title}}</text>
+    <text class="price">¥{{detail.price}}</text>
+    <text class="cate">分类：{{detail.category}}</text>
+    <text class="desc">描述：{{detail.description}}</text>
+  </view>
+</view>

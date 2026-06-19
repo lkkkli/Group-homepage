@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="title">账号注册</view>
+  <view class="form-box">
+    <input class="input" placeholder="请设置账号" value="{{username}}" bindinput="inputUsername" />
+    <input class="input" placeholder="请设置密码" password value="{{password}}" bindinput="inputPassword" />
+    <input class="input" placeholder="请再次输入密码" password value="{{repassword}}" bindinput="inputRepassword" />
+    <button class="reg-btn" bindtap="doRegister">立即注册</button>
+  </view>
+</view>

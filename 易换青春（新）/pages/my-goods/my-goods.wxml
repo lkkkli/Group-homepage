@@ -1,0 +1,19 @@
+<view class="container">
+  <block wx:if="{{myGoodsList.length > 0}}">
+    <block wx:for="{{myGoodsList}}" wx:key="id">
+      <view class="goods-item">
+        <image src="{{item.pic}}" class="goods-img" />
+        <view class="info">
+          <!-- 完全按后端字段名：title、price -->
+          <view class="title">{{item.title}}</view>
+          <view class="price">¥{{item.price}}</view>
+        </view>
+        <view class="btn-box">
+          <button size="mini" type="warn" bindtap="deleteGoods" data-id="{{item.id}}">删除</button>
+        </view>
+      </view>
+    </block>
+  </block>
+
+  <view wx:else class="empty-tip">暂无发布商品</view>
+</view>
